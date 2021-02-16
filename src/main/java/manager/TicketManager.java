@@ -18,15 +18,15 @@ public class TicketManager {
     public Ticket[] findAll(String from, String to) {
         int tmp = 0;
         for (Ticket item : ticketRepository.findAll()) {
-            if ((item.getDeparture().equals(from))&&(item.getArrival().equals(to))) {
+            if ((item.getDeparture().equals(from)) && (item.getArrival().equals(to))) {
                 tmp++;
             }
         }
         Ticket[] result = new Ticket[tmp];
 
-        int i=0;
+        int i = 0;
         for (Ticket item : ticketRepository.findAll()) {
-            if ((item.getDeparture().equals(from))&&(item.getArrival().equals(to))) {
+            if ((item.getDeparture().equals(from)) && (item.getArrival().equals(to))) {
                 result[i] = item;
                 i++;
             }
